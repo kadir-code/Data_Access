@@ -30,13 +30,12 @@ namespace Dapper_CRUD
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSaveStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCreateStudent = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSaveStudent = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -50,6 +49,16 @@ namespace Dapper_CRUD
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // btnSaveStudent
+            // 
+            this.btnSaveStudent.Location = new System.Drawing.Point(163, 99);
+            this.btnSaveStudent.Name = "btnSaveStudent";
+            this.btnSaveStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveStudent.TabIndex = 3;
+            this.btnSaveStudent.Text = "Save";
+            this.btnSaveStudent.UseVisualStyleBackColor = true;
+            this.btnSaveStudent.Click += new System.EventHandler(this.btnSaveStudent_Click);
             // 
             // label1
             // 
@@ -67,39 +76,27 @@ namespace Dapper_CRUD
             this.txtCreateStudent.Size = new System.Drawing.Size(124, 22);
             this.txtCreateStudent.TabIndex = 1;
             // 
-            // dataGridView1
+            // listBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 260);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 178);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // btnSaveStudent
-            // 
-            this.btnSaveStudent.Location = new System.Drawing.Point(163, 99);
-            this.btnSaveStudent.Name = "btnSaveStudent";
-            this.btnSaveStudent.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveStudent.TabIndex = 3;
-            this.btnSaveStudent.Text = "Save";
-            this.btnSaveStudent.UseVisualStyleBackColor = true;
-            this.btnSaveStudent.Click += new System.EventHandler(this.btnSaveStudent_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(35, 238);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(700, 196);
+            this.listBox1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,9 +106,9 @@ namespace Dapper_CRUD
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCreateStudent;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSaveStudent;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

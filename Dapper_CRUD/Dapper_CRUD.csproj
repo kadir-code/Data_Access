@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\DataContext.cs" />
     <Compile Include="Entities\Concrete\Student.cs" />
     <Compile Include="Entities\Concrete\Subject.cs" />
     <Compile Include="Form1.cs">
