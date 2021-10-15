@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E_CommercialDb.Models.Entities.Concrete
 {
-    class Order
+    public class Order
     {
     }
 }
