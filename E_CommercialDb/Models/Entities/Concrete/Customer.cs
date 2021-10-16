@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_CommercialDb.Models.Entities.Concrete
 {
-    public class Supplier:BaseEntity
+    public class Customer: BaseEntity
     {
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
@@ -15,8 +15,7 @@ namespace E_CommercialDb.Models.Entities.Concrete
         public string Adress { get; set; }
         public string City { get; set; }
         public string Region { get; set; }
-        public string Country { get; set; }
-        public virtual List<Product> Products { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }
