@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_CRUD", "Dapper_CRUD\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbFirst_Procedure", "DbFirst_Procedure\DbFirst_Procedure.csproj", "{941E85A5-11FC-45AD-93E6-F34CF9F23535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_PhoneDiary", "Dapper_PhoneDiary\Dapper_PhoneDiary.csproj", "{0F834185-57FC-4BEF-B2DF-ABA14439C30D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{941E85A5-11FC-45AD-93E6-F34CF9F23535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{941E85A5-11FC-45AD-93E6-F34CF9F23535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{941E85A5-11FC-45AD-93E6-F34CF9F23535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
