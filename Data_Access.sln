@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbFirst_Procedure", "DbFirs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_PhoneDiary", "Dapper_PhoneDiary\Dapper_PhoneDiary.csproj", "{0F834185-57FC-4BEF-B2DF-ABA14439C30D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperOperations_Northwind", "DapperOperations_Northwind\DapperOperations_Northwind.csproj", "{4DF87599-1A91-4F12-83C5-B098BB1D7531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F834185-57FC-4BEF-B2DF-ABA14439C30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF87599-1A91-4F12-83C5-B098BB1D7531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF87599-1A91-4F12-83C5-B098BB1D7531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF87599-1A91-4F12-83C5-B098BB1D7531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF87599-1A91-4F12-83C5-B098BB1D7531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
