@@ -21,6 +21,7 @@ namespace DapperOperations_Northwind
 
         private void btnExacute_Click(object sender, EventArgs e)
         {
+            /*
             //update by execute
             //get list of employees by query
             db.Execute("update employees set firstname='jane' where employeeId=1");
@@ -53,6 +54,7 @@ namespace DapperOperations_Northwind
             DynamicParameters param = new DynamicParameters();
             param.Add("Id", txtValue.Text.ToString());
             dataGridView1.DataSource = db.Query("sp_GetCustomerOrders", param, commandType: CommandType.StoredProcedure).ToList();
+            */
         }
 
        
