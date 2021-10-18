@@ -8,7 +8,7 @@ namespace IMDB.Infrasutructure
 {
     public static class Utilities
     {
-       static void Eraser(GroupBox groupBox)
+       public static void Eraser(GroupBox groupBox)
         {
             foreach (Control item in groupBox.Controls)
             {

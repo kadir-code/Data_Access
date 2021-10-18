@@ -15,7 +15,6 @@ namespace IMDB.Models.Entities.Concrete
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public override int Id { get; set; }
         public string GenreName { get; set; }
-        public string Description { get; set; }
         public List<AssignedMovieToGenre> AssignedMovieToGenres { get; set; }
     }
 }

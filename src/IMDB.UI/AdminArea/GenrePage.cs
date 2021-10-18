@@ -11,12 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
+using IMDB.Infrasutructure;
+
 namespace IMDB.UI.AdminArea
 {
     public partial class GenrePage : Form
     {
-       SqlConnection db = new SqlConnection("Server=DESKTOP-J1PKMI5\\SQLEXPRESS;Database=DapperIMDB;Trusted_Connection=True");
         GenreRepository genreRepository = new GenreRepository();
+        
         public GenrePage()
         {
             InitializeComponent();
@@ -24,10 +26,53 @@ namespace IMDB.UI.AdminArea
 
         private void GenrePage_Load(object sender, EventArgs e)
         {
-            //Genre genre = new Genre();
-            List<Genre> genres=db.Query<Genre>("up_GetAllGenres", commandType: CommandType.StoredProcedure).ToList();
-            dataGridView1.DataSource = genres;
-            //genreRepository.ListAllItems(dataGridView1);
+            genreRepository.ListAllItems(dataGridView1);
+        }
+
+        private void btnOnlyActiveElements_Click(object sender, EventArgs e)
+        {
+           dataGridView1.DataSource= genreRepository.ListActiveItems();
+        }
+        Genre genre = new Genre();
+        private void btcCreateGenre_Click(object sender, EventArgs e)
+        {
+
+            genreRepository.CreateItem(genre,txtCreateGenre);
+            dataGridView1.DataSource = genreRepository.ListActiveItems();
+            Utilities.Eraser(grpCreateGenre);
+        }
+
+        private void BtnFindById_Click(object sender, EventArgs e)
+        {
+            genreRepository.FindById(genre.Id,txtFindById);
+            dataGridView1.DataSource = genreRepository.ListActiveItems();
+            Utilities.Eraser(grpCreateGenre);
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUpdateGenreId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtUpdateGenre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Utilities.Eraser(grpCreateGenre);
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            genreRepository.UpdateItem(genre,txtUpdateGenreId,txtUpdateGenre);
+            dataGridView1.DataSource = genreRepository.ListActiveItems();
+            Utilities.Eraser(grpCreateGenre);
+
+        }
+
+        private void btnDeleteGenre_Click(object sender, EventArgs e)
+        {
+            genreRepository.DeleteItem(genre,txtDeleteGenre);
+            dataGridView1.DataSource= genreRepository.ListActiveItems();
+            Utilities.Eraser(grpCreateGenre);
+
         }
     }
 }

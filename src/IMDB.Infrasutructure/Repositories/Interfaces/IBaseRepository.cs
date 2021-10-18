@@ -12,11 +12,9 @@ namespace IMDB.Infrasutructure.Repositories.Interfaces
     {
         void ListAllItems(DataGridView dataGridView);
         List<T> ListActiveItems();
-        void CreateItem(T item);
-        void UpdateItem(T item);
-        void DeleteItem(T item);
-        T FindById(int id);
-        T GetByDefault(Expression<Func<T,bool>>exp);
-        List<T> GetByDefaults(Expression<Func<T,bool>>exp);
+        void CreateItem(T item,TextBox textBox);
+        void UpdateItem(T item,TextBox textBox,TextBox textBox1);
+        void DeleteItem(T item,TextBox textBox);
+        T FindById(int id,TextBox textBox);
     }
 }
