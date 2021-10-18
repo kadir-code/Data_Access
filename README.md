@@ -69,6 +69,51 @@ It is a three-step process.
 * Write a query to perform CRUD operations.
 * Pass query as a parameter in the Execute method.
 
+> SQL commands can be used easily with Dapper.
+
+```
+string sql = "INSERT INTO Customers (CustomerName) Values (@CustomerName);";
+
+   var affectedRows = connection.Execute(sql, new {CustomerName = "Mark"});
+
+   Console.WriteLine(affectedRows);
+
+
+```
+
+> In addition, stored procedures and dynamically using parameters are also very functional.
+
+```
+ if (db.State==ConnectionState.Closed)
+            {
+                db.Open();
+
+                //the parameters of stored procedure and ones inside param have to be same
+                DynamicParameters param = new DynamicParameters();
+                param.Add("@contactid", contactId);
+                param.Add("@name", txtName.Text.Trim());
+                param.Add("number",txtNumber.Text.Trim());
+                db.Execute("up_ContactAddOrEdit",param,commandType:CommandType.StoredProcedure);
+
+                if (contactId==0)
+                {
+                    MessageBox.Show("Saved Succesfully");
+
+                }
+                else
+                {
+                    MessageBox.Show("Updated Succesfully");
+
+                }
+                GetAllContacts();
+                Eraser(txtName, txtNumber);
+
+            }
+
+```
+
+
+
 
 
 
